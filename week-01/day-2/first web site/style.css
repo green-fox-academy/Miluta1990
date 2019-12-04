@@ -1,0 +1,59 @@
+body{
+    background-image: url(hatter.jpg);
+}
+h1{
+    font-size: 70px;
+    color: black;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav{
+    font-size: 18px;
+    background: url(first-website-design.png);
+    
+}
+a{
+    color: lightseagreen;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+    text-decoration-color: chocolate;
+}
+ul{
+    list-style-type: none;
+    text-align: right;
+}
+
+ul a{
+    color: lightseagreen;
+    
+}
+
+li{
+    display: inline-block;
+    margin: 5px 20px;
+    text-transform: uppercase;
+}
+h2{
+    text-align: center;
+    border: 1px solid black
+}
+#first{
+    text-align: right;
+    
+}
+#second{
+    text-align: center;
+}
+#third{
+    text-align: left;
+}
+h3{
+    text-align: center;
+    text-decoration: underline;
+}
+.article{
+    font-style: oblique;
+}
