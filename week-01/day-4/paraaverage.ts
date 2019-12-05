@@ -8,10 +8,11 @@ let inputNumber: number = 6
 let sumUp: number = 0
 let average: number;
 
-for (let i:number = 1; i>=inputNumber; i++) {
+for (let i:number = 1; i<=inputNumber; i++) {
 
-    sumUp = inputNumber + i ;
-    average = sumUp/inputNumber;
-}
+    sumUp = sumUp + i ;
     
+    
+}
+average = sumUp/inputNumber;    
 console.log('Sum: ' + sumUp + ' ' + 'Average: ' + average );
