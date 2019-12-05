@@ -10,9 +10,9 @@ let lineCount: number = 4;
 // ****
 //
 // The triangle should have as many lines as lineCount is
-console.log(' ')
-console.log('*')
-console.log('**')
-console.log('***')
-console.log('****')
-console.log(' ') 
+
+for (let i: number = 1; i<=lineCount;i ++) {
+
+        
+}
+console.log ()
