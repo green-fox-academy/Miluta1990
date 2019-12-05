@@ -1,8 +1,17 @@
-'use strict';
+let d: number =  7;
+let time: number = 100;
+let out3: string = '';
 
-let j: number = 1521;
-// tell if j is divisible by 3 or 5 (as a boolean)
-console.log(j%3 || j%5 );
-let divisible: boolean = true ;
-if (j%3 === 0 ) {console.log(divisible)} else {console.log('false')};
-if (j%5 === 0 ) {console.log(divisible)} else {console.log('false')};
+// if d is dividable by 4
+// and time is not more than 200
+// set out3 to "check"
+// if time is more than 200
+// set out3 to "Time out"
+// otherwise set out3 to "Run Forest Run!"
+
+if (d%4 === 0 && time <= 200) {console.log(out3, 'check')}
+else if (time > 200) {console.log(out3, 'Time out')}
+else {console.log(out3, 'Run Forest Run!')}
+
+
+
