@@ -16,10 +16,3 @@ let lineCount: number = 7;
 // The diamond should have as many lines as lineCount i
 
 
-console.log('   *   ')
-console.log('  ***   ')
-console.log(' ***** ')
-console.log('******* ')
-console.log(' ***** ')
-console.log('  ***  ')
-console.log('   *  ')
