@@ -22,7 +22,7 @@
         row2= row2 + '';
         for (let y:number = 0; y<= g +3  ; y++) {     //0. 3 space 5 star // 1. 4 space 3 star 
             row2 = row2 + ' ';                                      // 2. 5 space 1 star
-            for (let z: number = 0; z < lineCount - (1*2);z++)
+            for (let z: number = 0; z < );z++)
             row2= row2 + star;
         }
         console.log(row2);
