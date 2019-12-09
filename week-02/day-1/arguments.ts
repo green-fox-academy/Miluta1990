@@ -4,7 +4,11 @@
 //    which logs to the console the input parameters
 //    (can have multiple number of arguments)
 
-var num = [7, 8, 9];
-num.forEach(function (value) {
-    console.log(value);
-});
+function printParams(parameter: any){
+
+    parameter.forEach(element => { console.log(element)
+        
+    });
+}
+
+printParams(['Batman', 2456, null, false, 'Green Fox']); 
