@@ -1,7 +1,8 @@
 'use strict'
 
-let example: string = 'Hi, this, is, the, Reddit, class';
+let reversed: string = `.eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI`;
+function reverse(reversed) {                                //szétszeletelem
+    return reversed.reverse()
+}
 
-let h: string = example.slice(0,1);
-let i: string = example.slice(1,2);
-console.log(h,i);
+console.log(reverse(reversed));

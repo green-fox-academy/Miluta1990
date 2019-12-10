@@ -3,8 +3,8 @@
 // Use it on this reversed string to check it!
 
 let reversed: string = `.eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI`;
-function reverse(reversed) {
-    let newString = '';
+function reverse(reversed) {                                //szétszeletelem
+    let newString = '';                                     
     for (let i = reversed.length - 1; i >= 0; i--) {
         newString += reversed[i];
     }
