@@ -23,7 +23,7 @@ function manipulateFile(Filename: string): any {
 
     }
     catch (e){
-        console.log('Unable to write file: my-file.txt');
+        console.log('Unable to write file: my-file.txt! :(');
     }
 
 }
