@@ -8,12 +8,12 @@
 const fs = require('fs');
 const path: string = './my-txext.txt';
 const charEncoding: string = 'utf-8';
-let fileContent = fs.readFileSync(path, charEncoding);
+let fileContent = ''
 
 function lineCount(fileName: string): any {
    
     try{
-
+        let fileContent = fs.readFileSync(path, charEncoding);
         let textInFile = fileContent.split('\r\n');
         console.log(textInFile.length);
         }
