@@ -15,7 +15,7 @@ const ctx = canvas.getContext('2d');
 function centerSquare (size) {
 
     ctx.strokeRect(canvas.width /2 - size/2, canvas.height /2 - size/2, size, size);
-
+   
 }
 
 centerSquare(30)
