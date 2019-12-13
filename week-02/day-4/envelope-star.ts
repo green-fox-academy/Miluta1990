@@ -8,11 +8,11 @@ const ctx = canvas.getContext('2d');
 
 let stepper: number = 20; 
 
-for (let i:number = 0; i<=  4 ; i++) {
+for (let i:number = 0; i<=canvas.width/stepper/2 ; i++) {
 
     ctx.beginPath();
-    ctx.moveTo(i*stepper, 0);
-    ctx.lineTo(canvas.width, i*stepper);
+    ctx.moveTo(canvas.width /2 , 0);
+    ctx.lineTo(canvas.height , i*stepper);
     ctx.strokeStyle = 'purple';
     ctx.stroke()
 }
