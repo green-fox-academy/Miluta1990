@@ -6,7 +6,7 @@ const ctx = canvas.getContext('2d');
 
 // width = 400 length = 400;
 
-let stepper: number = 20; 
+let stepper: number = 10; 
 ctx.translate(canvas.width/2, canvas.height/2)
 for (let j:number = 0 ; j <= 4 ; j++) {
 
