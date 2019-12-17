@@ -10,7 +10,7 @@ let pokemonOfAsh: Pokemon[] = initializePokemon();
 // Ash has a few pokemon.
 // A wild pokemon appeared!
 
-let wildPokemon: Pokemon = new Pokemon('Oddish', 'leaf', 'water');
+let wildPokemon: Pokemon = new Pokemon('Oddish', 'water', 'water');
 
 // Which pokemon should Ash use?
 
@@ -31,6 +31,7 @@ for (let i: number = 0; i < pokemonOfAsh.length; i++) {
     if (pokemonOfAsh[i].isEffectiveAgainst(wildPokemon)) {
 
         console.log(`I choose you, ${pokemonOfAsh[i].name}!`);
+        break;
     }
 
 }
