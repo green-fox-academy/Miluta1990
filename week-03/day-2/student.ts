@@ -11,7 +11,7 @@ Call the student's question() method and the teacher's teach() method*/
 'use strict'
 
 import { Teacher } from './teacher';
-import { SSL_OP_ALLOW_UNSAFE_LEGACY_RENEGOTIATION } from 'constants';
+
 
 class Student {
 
