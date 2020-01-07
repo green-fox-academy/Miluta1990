@@ -1,6 +1,6 @@
 'use strict'
 
-class Tree {
+export class Tree {
     waterAmount:number;
     canAbsorb:number;
     needWaterBelow:number;
@@ -15,4 +15,4 @@ class Tree {
     
   }
   
-  export { Tree };
+  

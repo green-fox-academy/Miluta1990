@@ -1,7 +1,7 @@
 'use strict'
 
 import { Flower } from './Flower';
-import { Tree } from './Tree';
+import  { Tree  }from './Tree';
 
 /*The Garden
 is able to hold unlimited amount of flowers or trees
@@ -31,7 +31,7 @@ class Garden {
     }
     showGarden(){
         for(let i:number=0; i<this.allFlowers.length; i++){
-          console.log(`The ${this.allFlowers[i].color} Flower `);
+          console.log(`The ${this.allFlowers[i].color} Flower ${this.allFlowers[i].waterAmount<this.allFlowers[i].needWaterBelow} needs water / doesnt need`);
         };
         for(let i:number=0; i<this.allTrees.length; i++){
           console.log(`The ${this.allTrees[i].color} Tree `);
@@ -42,8 +42,16 @@ class Garden {
     //watering
  water (waterAmount: number) {
 
+    let addingWater: number = 0;
 
- }
+    for (let i: number = 0; i < this.allFlowers.length; i++) {
+
+        if(this.allFlowers[i].waterAmount<this.allFlowers[i].needWaterBelow) {
+
+            addingWater++;
+        };
+    };
+ };
 
 };  
 let myGarden = new Garden();
@@ -53,3 +61,5 @@ myGarden.plant('flower', 'blue');
 myGarden.plant('tree', 'orange'); 
 myGarden.plant('tree', 'purple');
 myGarden.showGarden();
+myGarden.water(40);
+myGarden.water(70);
