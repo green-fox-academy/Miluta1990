@@ -23,7 +23,8 @@ console.log(
 );
 let guitar2 = new ElectricGuitar(7);
 let bassGuitar2 = new BassGuitar(5);
-
+let violin2 = new Violin(3)
 console.log('Test 2 Play');
 guitar2.play();
 bassGuitar2.play();
+violin2.play();
