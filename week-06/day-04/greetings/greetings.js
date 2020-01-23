@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
     if (!name) {
         name = 'Guest';
     }
-    res.render('home', { title: `Welcome back, ${name}` });
+    res.render('home', { title: `Welcome, ${name}` });
 });
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}`));
