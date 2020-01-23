@@ -8,7 +8,7 @@ const todos = ['get up', 'survive', 'go back to bed', 'sleep all day' , 'drink a
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-    res.render('home', {todos:todos});
+    res.render('home', {todos});
 });
 
 
