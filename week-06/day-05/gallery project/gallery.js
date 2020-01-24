@@ -12,3 +12,22 @@ const listOfImages = [
 ];
 
 let currentPictureIndex = 0;
+
+function onKeyPress(event) {
+  switch (event.keyCode)
+  {
+    case 37: slide('left'); break;
+    case 39: slide('right'); break;
+  }};
+
+  function slide(direction){
+    if(direction === 'right'){
+      actualImageIndex ++;
+      if(actualImageIndex > listOfImages.length-1) actualImageIndex = 0;
+      changeMainImage(actualImageIndex);
+    };
+    if(direction === 'left'){
+      actualImageIndex --;
+      if(actualImageIndex < 0) actualImageIndex = listOfImages.length-1;
+      changeMainImage(actualImageIndex);
+    }};
