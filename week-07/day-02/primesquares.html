@@ -44,7 +44,7 @@
     <script>
         //   1: generate 100 divs to the <section> element and add index numbers to it as the element's textContent
         function numberGenerator() {
-            for (i = 2; i <= 100; i++) {
+            for (let i = 2; i <= 100; i++) {
             document.getElementsByTagName('section')[0].appendChild(document.createElement('div')).innerText = i;
         };
     };
