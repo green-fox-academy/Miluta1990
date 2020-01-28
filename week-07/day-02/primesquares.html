@@ -46,8 +46,8 @@
         function numberGenerator() {
             for (i = 2; i <= 100; i++) {
             document.getElementsByTagName('section')[0].appendChild(document.createElement('div')).innerText = i;
-        }
-    }
+        };
+    };
         //   2: Create a function that adds a 'not-prime' class to a div if it's not a prime and 'prime' if it is
         function isPrime(num) {
             for (let i = 2; i < num; i++)
@@ -56,6 +56,7 @@
         };
         function primeCheck(index) {
             let numbersArray = document.getElementsByTagName('div');
+            console.log(isPrime(numbersArray[index].innerText)) ;
             if (isPrime(numbersArray[index].innerText)) {
                 numbersArray[index].setAttribute('class', 'prime');
             } else {
@@ -71,7 +72,7 @@
 
         let index= 0;
         let superInterval = setInterval(() => {
-            primeChecker(index);
+            primeCheck(index);
             index += 1
             if (index == 100) {
                 clearInterval(superInterval);
