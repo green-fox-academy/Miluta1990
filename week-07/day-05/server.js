@@ -72,9 +72,6 @@ app.post('/posts', (req, res) => {
 app.put('/posts/:id/upvote', async(req,res)=> {
     let id = req.params.id;
     let addUpVote = `UPDATE ${tableName} SET score = score +1 WHERE id = ${id}`;
-    connection.query(addUpVote, (err, result) => {
-        err ? res.send(new Error(err)) : res.set(responseSettings).send(JSON.stringify(result));
-      });
 });
 
 app.listen(PORT, () => {
