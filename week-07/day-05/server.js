@@ -6,6 +6,7 @@ const app = express();
 const PORT = 3000;
 require('dotenv').config();
 const tableName ='posts';
+app.use(express.static('public'))
 
 app.use(express.json());
 // connection details
@@ -68,11 +69,31 @@ app.post('/posts', (req, res) => {
         console.log('Data inserted');
     });
 });
-//voteup
-app.put('/posts/:id/upvote', async(req,res)=> {
-    let id = req.params.id;
-    let addUpVote = `UPDATE ${tableName} SET score = score +1 WHERE id = ${id}`;
+//vote up
+
+app.put('/posts/:id/upvote', (req, res) => {
+    let upvote = `UPDATE ${tableName} SET score = score +1 WHERE (id = ${req.params.id})`;
+    conn.query(upvote, (error, result) => {
+        if(error){
+            console.log(error);
+            res.status(500).send('DB ERROR');
+            return;
+        }
+        res.status(200).send(result);
+    })
 });
+//votedown
+app.put('/posts/:id/downvote', (req, res) => {
+    let downvote = `UPDATE ${tableName} SET score = score -1 WHERE (id = ${req.params.id})`;
+    conn.query(downvote, (error, result) => {
+        if(error){
+            console.log(error);
+            res.status(500).send('DB ERROR');
+            return;
+        }
+        res.status(200).send(result);
+    })
+});  
 
 app.listen(PORT, () => {
     console.log(`Application is listening on port# ${PORT}`);
