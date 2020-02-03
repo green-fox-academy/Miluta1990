@@ -3,11 +3,13 @@
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
-const PORT = 3000;
+const PORT = 4000;
 require('dotenv').config();
-const tableName ='posts';
-app.use(express.static('public'))
+const tableName = 'posts';
+app.use(express.static('public'));
 
+
+app.use(express.urlencoded())
 app.use(express.json());
 // connection details
 const conn = mysql.createConnection({
@@ -16,6 +18,7 @@ const conn = mysql.createConnection({
     password: process.env.DB_PASS,
     database: 'reddit'
 });
+
 // database connection
 conn.connect((err) => {
     if (err) {
@@ -25,6 +28,16 @@ conn.connect((err) => {
     }
     console.log('Database connection established');
 });
+
+// serving the HTML files
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/public/index.html');
+  });
+  
+  app.get('/newpost', (req, res) => {
+    res.sendFile(__dirname + '/public/newpost.html');
+  });
+
 //Helloworld
 app.get('/hello', (req, res) => {
     res.send('Hello World')
@@ -33,7 +46,7 @@ app.get('/hello', (req, res) => {
 app.get('/posts', (req, res) => {
     let select_all = `SELECT * FROM ${tableName}`;
     conn.query(select_all, (error, result) => {
-        if(error){
+        if (error) {
             console.log(error);
             res.status(500).send('DB ERROR');
             return;
@@ -74,7 +87,7 @@ app.post('/posts', (req, res) => {
 app.put('/posts/:id/upvote', (req, res) => {
     let upvote = `UPDATE ${tableName} SET score = score +1 WHERE (id = ${req.params.id})`;
     conn.query(upvote, (error, result) => {
-        if(error){
+        if (error) {
             console.log(error);
             res.status(500).send('DB ERROR');
             return;
@@ -86,14 +99,29 @@ app.put('/posts/:id/upvote', (req, res) => {
 app.put('/posts/:id/downvote', (req, res) => {
     let downvote = `UPDATE ${tableName} SET score = score -1 WHERE (id = ${req.params.id})`;
     conn.query(downvote, (error, result) => {
-        if(error){
+        if (error) {
             console.log(error);
             res.status(500).send('DB ERROR');
             return;
         }
         res.status(200).send(result);
     })
-});  
+});
+
+//deletepost
+
+app.delete('/posts/:id', (req, res) => {
+    let query = `DELETE FROM ${tableName} 
+    WHERE id = ${req.params.id}`;
+    conn.query(query, (error, result) => {
+        if (error) {
+            console.log(error);
+            res.status(500).send('DB ERROR');
+            return;
+        }
+        res.status(200).send(result);
+    });
+});
 
 app.listen(PORT, () => {
     console.log(`Application is listening on port# ${PORT}`);
