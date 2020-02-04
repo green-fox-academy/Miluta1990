@@ -18,11 +18,11 @@ const navigation = (event) => {
     let inspector = document.querySelector('.img-inspector');
 
     if (direction === 'up') {
-        posY += 10;
+        posY -= 10;
         inspector.style.backgroundPositionY = posY + 'px';
     };
     if (direction === 'down') {
-        posY -= 10;
+        posY += 10;
         inspector.style.backgroundPositionY = posY + 'px';
     };
     if (direction === 'left') {
