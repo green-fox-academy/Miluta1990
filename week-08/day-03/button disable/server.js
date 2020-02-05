@@ -11,7 +11,7 @@ app.get('/' ,(req, res) => {
     res.sendfile('./public/index.html');
   });
   
-  app.post('/send', jsonParser, (req, res) => {
+  app.post('/send', (req, res) => {
     console.log(req.body)
   });
   
