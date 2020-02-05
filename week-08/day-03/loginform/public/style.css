@@ -10,6 +10,8 @@ body{
   h1{
     font-style: normal;
     margin-top: 0px;
+    opacity: 0.5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
   
   form{
@@ -68,6 +70,7 @@ body{
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: 97% 50%;
+    opacity: 0.6;
   }
   
   p {
