@@ -29,7 +29,16 @@ body, html {
   height: 60px;
   position: absolute;
 }
-
+form{
+    background-color: whitesmoke;
+    width: 25%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 6px;
+    margin: 30px;
+}
 .btn {
   width: 180px;
   height: 60px;
