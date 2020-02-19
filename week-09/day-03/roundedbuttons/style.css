@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #2f3060;
+  }
+
+div{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+
+button{
+    height: 50px;
+    width: 150px;
+    margin: 30px;
+    border-radius: 5px;
+    color: whitesmoke;
+    font-size: 15px;
+    box-shadow: black;
+}
+
+button:hover{
+    filter: brightness(110%);
+}
+
+button:active{
+    filter: brightness(90%);
+}
+
+button:focus{
+    outline: 0;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.light {
+    background-color: lightblue;
+}
+
+.black {
+    background-color: black;
+    color: grey;
+}
+
+.white {
+    background-color: white;
+    color: grey;
+}
