@@ -2,13 +2,14 @@
 
 const express = require('express');
 const mysql = require('mysql');
+const bodyParser = require('body-parser');
 const app = express();
 const PORT = 4000;
 require('dotenv').config();
 const tableName = 'posts';
 app.use(express.static('public'));
 
-
+app.use(bodyParser.urlencoded());
 app.use(express.urlencoded())
 app.use(express.json());
 // connection details
