@@ -45,7 +45,18 @@ aside{
   width: 20%;
   margin-right: 10px;
 }
-
+h4 {
+  font-size: 1em;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: #3d5a9a;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
 aside > button {
   font-size: 1em;
   width: 100%;
@@ -63,10 +74,17 @@ aside > button:hover{
   filter: brightness(120%)
 }
 
-.aside-content, .controls, .user {
-  padding: 20px;
+.aside-content {
+  font-size: 1em;
+  width: 100%;
+  margin: 0 0 10px 0;
+  padding: 10px;
+  border: none;
+  background-color: #3d5a9a;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  text-transform: uppercase;
   border-radius: 3px;
-  margin-bottom: 10px;
 }
 
 .aside-content > h2 {

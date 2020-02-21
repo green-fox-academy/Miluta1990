@@ -20,7 +20,8 @@
     </main>
     <div class="mainContainer"></div>
     <aside>
-      <button class="submit">Submit a new post</button>
+      <button class="submit" onclick="location.href='localhost:4000/newpost'">Submit a new post</button>
+      <button onclick="myFunc()">Click me</button>
       <div class="controls">
       </div>
       <div class="user">
@@ -42,7 +43,11 @@
     </aside>
   </article>
   <div class="mainContainer"></div>
-  <script src="index.js"></script>
+  <script src="index.js">
+    function myFunc() { 
+           window.location.href="https://www.wikipedia.org/"; 
+         } 
+  </script>
 </body>
 
 </html>
