@@ -5,7 +5,7 @@ const mainContent = document.querySelector('main');
 fetch('/posts')
   .then(res => res.text())
   .then(content => mainContent.innerText = content);
-  
+
 
 let button = document.getElementsByClassName('subBTN')[0];
 
