@@ -5,10 +5,16 @@ const mainContent = document.querySelector('main');
 fetch('/posts')
   .then(res => res.text())
   .then(content => mainContent.innerText = content);
+  
 
-let button = document.getElementsByClassName('submit');
+let button = document.getElementsByClassName('subBTN')[0];
 
-button.addEventListener('click', function(){
-    alert('only 1 button clicked');
-    window.location = 'http://www.google.hu';
-});
+
+function clickNewpost(x) {
+  console.log(x);
+    window.location = '/newpost';
+};
+
+button.addEventListener('click', () => clickNewpost('milan a kiraly'));
+
+let paragraph = document.createElement('p');
