@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Lato?selection.family=Lato:300">
+  <title>Music Player</title>
+</head>
+<body>
+  <div id="container">
+    <div id="logo"><img src="/assets/foxplayer.png" id="fox" alt="Green Fox logo" onclick="window.onload"><h3>Playlists</h3></div>
+    <div id="current">
+    </div>
+    
+    <div id="playlists">
+        
+    </div>
+    <div id="tracks">
+       
+    </div>
+    <div id="control">
+        <audio id="music" preload="true">
+            <source src="./Organoid_-_09_-_Purple_Drift.mp3">
+            
+              </audio>
+          <div id="audioplayer">
+              <button id="pButton" class="play"></button>
+              
+            <div id="timeline">    
+                <span style="float:left;" id="duration"></span> <div id="playhead"></div> <span style="float:right;" id="timeleft"></span>
+                <input id="vol-control" type="range" min="0" max="100" step="1" oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"></input>
+              </div>
+          </div>
+    </div>
+  </div>
+</body>
+<script src="index.js"></script>
+</html>
